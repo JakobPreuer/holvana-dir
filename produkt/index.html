@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de-AT" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produkt – Holvana</title>
+<meta name="description" content="Funktionen, Technik und Systemanforderungen von Holvana 1.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <div>
+      <h2 id="consent-title">Cookies und ähnliche Technologien</h2>
+      <p>Wir verwenden technisch notwendige Speicher für Warenkorb und Einstellungen. Mit Ihrer Einwilligung nutzen wir zusätzlich eine Statistik-Funktion (Demo). Details finden Sie in der <a href="../datenschutz/index.html">Datenschutzerklärung</a> und unter <a href="../cookies/index.html">Cookie-Einstellungen</a>.</p>
+    </div>
+    <div class="btns">
+      <button type="button" class="btn" data-consent="necessary">Nur notwendige</button>
+      <button type="button" class="btn" data-consent="all">Alle akzeptieren</button>
+    </div>
+  </div>
+</section>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="38" height="38">Holvana<span class="sr-only"> – zur Startseite</span></a>
+    <nav class="main-nav" aria-label="Hauptmenü"><ul><li><a href="../produkt/index.html" aria-current="page">Produkt</a></li><li><a href="../preise/index.html">Preise</a></li><li><a href="../download/index.html">Download</a></li><li><a href="../hilfe/index.html">Hilfe</a></li><li><a href="../ueber-uns/index.html">Über uns</a></li><li><a href="../kontakt/index.html">Kontakt</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="cart-link" href="../warenkorb/index.html" data-cart-link hidden>Warenkorb <span class="cart-count" aria-hidden="true" data-cart-count>0</span><span class="sr-only">(<span data-cart-label>0 Artikel</span>)</span></a>
+      <a class="btn btn-primary btn-small" href="../produkt/index.html#kaufen">Jetzt kaufen</a>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt" tabindex="-1">
+<div class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Brotkrümelnavigation"><ol><li><a href="../index.html">Startseite</a></li><li><span aria-current="page">Produkt</span></li></ol></nav><h1>Holvana 1</h1><p class="lead">Synchronisation und Wiederherstellung von Dateien zwischen Ihren eigenen Geräten.</p></div></div>
+
+<section class="section" aria-labelledby="ueberblick">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <h2 id="ueberblick" class="sr-only">Bilder und Kauf</h2>
+      <figure class="gallery-main">
+        <img id="gallery-img" src="../assets/img/screen-uebersicht.svg" width="960" height="600" alt="Übersicht: vier synchronisierte Ordner und der belegte Speicher am Heimserver.">
+        <figcaption id="gallery-cap">Übersicht: vier synchronisierte Ordner und der belegte Speicher am Heimserver.</figcaption>
+      </figure>
+      <ul class="thumbs" aria-label="Weitere Bildschirmfotos">
+        <li><button type="button" aria-pressed="true" data-shot="../assets/img/screen-uebersicht.svg" data-alt="Übersicht: vier synchronisierte Ordner und der belegte Speicher am Heimserver."><img src="../assets/img/screen-uebersicht.svg" alt="Übersicht anzeigen" width="112" height="70"></button></li>
+        <li><button type="button" aria-pressed="false" data-shot="../assets/img/screen-verlauf.svg" data-alt="Versionsverlauf: frühere Fassungen einer Datei, darunter ein Konflikt zwischen Laptop und Tablet."><img src="../assets/img/screen-verlauf.svg" alt="Versionsverlauf anzeigen" width="112" height="70"></button></li>
+        <li><button type="button" aria-pressed="false" data-shot="../assets/img/screen-geraete.svg" data-alt="Geräte: Heimserver, Laptop und Tablet mit Online-Status und Code zum Verbinden eines neuen Geräts."><img src="../assets/img/screen-geraete.svg" alt="Geräteliste anzeigen" width="112" height="70"></button></li>
+      </ul>
+    </div>
+    <div class="buy" id="kaufen">
+      <span class="label">Holvana 1</span>
+      <h2>Lizenz kaufen</h2>
+      <form id="buy-form" class="form">
+        <fieldset>
+          <legend>Lizenz wählen</legend>
+          <label class="option"><input type="radio" name="lizenz" value="einzel" checked><span><b>Einzellizenz – 49 €</b><small>Eine Person, alle eigenen Geräte</small></span></label>
+          <label class="option"><input type="radio" name="lizenz" value="familie"><span><b>Familienlizenz – 89 €</b><small>Bis zu fünf Personen in einem Haushalt</small></span></label>
+        </fieldset>
+        <div class="field" style="max-width:10rem">
+          <label for="buy-qty">Anzahl</label>
+          <select id="buy-qty"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+        </div>
+        <p class="price"><span id="buy-price">49,00 €</span><small>pro Lizenz, inkl. 20 % USt. · einmalig</small></p>
+        <p class="muted" style="margin:0">Sofort nach dem Kauf als Download verfügbar. Sicherheitsupdates inklusive.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <button type="submit" class="btn btn-primary" value="warenkorb">In den Warenkorb</button>
+          <button type="submit" class="btn" value="kasse">Direkt zur Kasse</button>
+        </div>
+        <div id="buy-status" class="notice" role="status"></div>
+        <p class="hint" style="margin:0">Es gelten die <a href="../lizenz/index.html">Lizenzbedingungen</a>. <a href="../download/index.html">Erst testen?</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="funktionen">
+  <div class="wrap">
+    <div class="section-head"><span class="label">Funktionen</span><h2 id="funktionen">Was Holvana kann</h2></div>
+    <div class="cards">
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M34 16a12 12 0 0 0-21-3" /><path d="M12 7v7h7" /><path d="M10 28a12 12 0 0 0 21 3" /><path d="M32 37v-7h-7" /></svg><h3>Automatische Synchronisation</h3><p>Ausgewählte Ordner werden zwischen allen verbundenen Geräten abgeglichen. Geänderte Teile einer Datei werden einzeln übertragen.</p></article>
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22a13 13 0 1 0 4-9.4" /><path d="M8 7v7h7" /><path d="M22 15v8l5 3" /></svg><h3>Gelöschte Dateien wiederherstellen</h3><p>Gelöschte und überschriebene Dateien bleiben am Heimserver im Versionsverlauf erhalten und lassen sich zurückholen.</p></article>
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="12" width="20" height="24" rx="2" /><path d="M15 8h17a2 2 0 0 1 2 2v20" /><path d="M15 20h10M15 26h10" /></svg><h3>Konflikte selbst entscheiden</h3><p>Ändern zwei Geräte dieselbe Datei gleichzeitig, bleiben beide Fassungen erhalten. Sie wählen, welche gilt.</p></article>
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="20" width="22" height="16" rx="2" /><path d="M16 20v-5a6 6 0 0 1 12 0v5" /><path d="M22 26v4" /></svg><h3>Verschlüsselte Verbindungen</h3><p>Geräte verbinden sich nur nach Bestätigung durch einen Code. Die Übertragung zwischen den Geräten ist verschlüsselt.</p></article>
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21 22 9l15 12" /><path d="M11 18v17h22V18" /><rect x="18" y="24" width="8" height="11" /></svg><h3>Selbst gehostet</h3><p>Ihr eigener Server ist ein „immer eingeschalteter Peer“. Holvana GmbH betreibt keine Server für Ihre Dateien.</p></article>
+      <article class="card"><svg class="card-icon" viewBox="0 0 44 44" aria-hidden="true" focusable="false" fill="none" stroke="#7CC4FA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="22" r="6" /><path d="M21 22h16M31 22v5M36 22v4" /></svg><h3>Einmal kaufen</h3><p>Kein Abo. Sicherheitsupdates sind enthalten, neue Hauptversionen gibt es zum reduzierten Upgrade-Preis.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="so-funktionierts">
+  <div class="wrap split">
+    <div>
+      <span class="label">Technik</span>
+      <h2 id="so-funktionierts">So funktioniert Holvana</h2>
+      <p>Holvana besteht aus einem Programm, das auf jedem Ihrer Geräte läuft. Eines davon, Ihr Heimserver, bleibt immer eingeschaltet. Aus Sicht der anderen Geräte ist er einfach ein Gerät, das nie schläft.</p>
+      <p class="muted">Ist der Laptop unterwegs, holt er sich Änderungen beim nächsten Kontakt vom Heimserver. Die Geräte sprechen direkt miteinander (Peer-to-Peer). Eine zentrale Cloud gibt es nicht.</p>
+    </div>
+    <figure><img src="../assets/img/so-funktionierts.svg" width="880" height="420" alt="Schema: Laptop, Smartphone und ein immer eingeschalteter Heimserver sind direkt miteinander verbunden. Eine fremde Cloud wird nicht benötigt."></figure>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="video">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <span class="label">Video</span>
+      <h2 id="video">Holvana in 20 Sekunden</h2>
+      <p class="muted">Ein kurzer Rundgang durch die App. Das Video hat deutsche Untertitel und eine Textfassung.</p>
+      <h3 style="margin-top:2rem">Der Holvana-Klang</h3>
+      <p class="muted">Diesen Klang spielt Holvana, wenn alle Geräte synchron sind.</p>
+      <audio controls preload="none" aria-describedby="klang-text"><source src="../assets/audio/holvana-klangmarke.mp3" type="audio/mpeg">Ihr Browser kann diese Audiodatei nicht abspielen.</audio>
+      <p id="klang-text" class="hint">Beschreibung: zwei kurze, aufsteigende Töne (E und A), zusammen unter einer Sekunde.</p>
+    </div>
+    <figure class="media">
+      <video controls preload="metadata" poster="../assets/video/holvana-demo-poster.png" width="1280" height="720">
+        <source src="../assets/video/holvana-demo.mp4" type="video/mp4">
+        <track kind="captions" src="../assets/video/holvana-demo.de.vtt" srclang="de" label="Deutsch" default>
+        Ihr Browser kann dieses Video nicht abspielen.
+      </video>
+      <figcaption>Rundgang durch die Holvana-App (ohne Sprecher, mit Untertiteln).</figcaption>
+      <details class="transcript"><summary>Textfassung des Videos</summary>
+        <p>Szene 1: Die Übersicht zeigt alle synchronisierten Ordner und den belegten Speicher am Heimserver.</p>
+        <p>Szene 2: Im Versionsverlauf lassen sich frühere Fassungen einer Datei wiederherstellen. Bei einem Konflikt wählen Sie die gewünschte Version.</p>
+        <p>Szene 3: Neue Geräte verbinden Sie mit einem einmaligen Code.</p>
+        <p>Schluss: Logo von Holvana, dazu der Holvana-Klang (zwei aufsteigende Töne).</p>
+      </details>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="technik">
+  <div class="wrap narrow">
+    <span class="label">Technische Details</span>
+    <h2 id="technik">Systemanforderungen</h2>
+    <div class="table-scroll">
+      <table class="data">
+        <caption>Systemanforderungen für Holvana 1</caption>
+        <tbody>
+          <tr><th scope="row">Heimserver</th><td>Windows 10/11, Linux (64 Bit) oder NAS mit Docker; dauerhaft eingeschaltet</td></tr>
+          <tr><th scope="row">Clients</th><td>Windows 10/11, macOS 13 oder neuer, Linux, Android 12 oder neuer</td></tr>
+          <tr><th scope="row">Netzwerk</th><td>Internetverbindung für die Verbindung außerhalb des Heimnetzes</td></tr>
+          <tr><th scope="row">Speicher</th><td>Am Heimserver mindestens so viel Platz wie die synchronisierten Ordner plus Versionsverlauf</td></tr>
+          <tr><th scope="row">Sprache</th><td>Deutsch, Englisch</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="todo"><p>Die Systemanforderungen sind Annahmen. Prüfen Sie, ob sie zu Ihrem Produkt passen (Aufgabe 0: Plattformen).</p></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-cols">
+    <div class="footer-about">
+      <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="30" height="30">Holvana<span class="sr-only"> – zur Startseite</span></a>
+      <p>Dateisynchronisation zwischen Ihren eigenen Geräten. Entwickelt in Oberösterreich.</p>
+    </div>
+    <nav aria-labelledby="f-prod"><h2 id="f-prod">Produkt</h2><ul>
+      <li><a href="../produkt/index.html">Funktionen</a></li>
+      <li><a href="../preise/index.html">Preise</a></li>
+      <li><a href="../download/index.html">Testversion</a></li>
+      <li><a href="../hilfe/index.html">Hilfe und FAQ</a></li>
+    </ul></nav>
+    <nav aria-labelledby="f-firm"><h2 id="f-firm">Unternehmen</h2><ul>
+      <li><a href="../ueber-uns/index.html">Über uns</a></li>
+      <li><a href="../ueber-uns/index.html#marken">Unsere Marken</a></li>
+      <li><a href="../kontakt/index.html">Kontakt</a></li>
+      <li><a href="../credits/index.html">Medien und Lizenzen</a></li>
+    </ul></nav>
+    <div><h2 id="f-kontakt">Kontakt</h2>
+      <address class="address">Holvana GmbH<br>[Straße und Hausnummer]<br>4906 Eberschwang<br>Österreich</address>
+      <p style="margin-top:.6rem"><a href="../kontakt/index.html">Kontaktformular</a></p>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <div class="wrap">
+      <p>© 2026 Holvana GmbH</p>
+      <nav aria-label="Rechtliches"><ul>
+        <li><a href="../impressum/index.html">Impressum</a></li>
+        <li><a href="../datenschutz/index.html">Datenschutz</a></li>
+        <li><a href="../lizenz/index.html">Lizenz (EULA)</a></li>
+        <li><a href="../agb/index.html">AGB</a></li>
+        <li><a href="../ruecktritt/index.html">Rücktrittsrecht</a></li>
+        <li><a href="../barrierefreiheit/index.html">Barrierefreiheit</a></li>
+        <li><a href="../cookies/index.html">Cookie-Einstellungen</a></li>
+      </ul></nav>
+    </div>
+    <div class="wrap"><p class="student-note">Studienprojekt: Holvana GmbH ist ein fiktives Unternehmen. Es werden keine echten Bestellungen angenommen und keine Zahlungen abgewickelt.</p></div>
+  </div>
+</footer>
+</body>
+</html>

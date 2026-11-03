@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de-AT" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kasse – Holvana</title>
+<meta name="description" content="Bestellung abschließen.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
+  <div class="wrap">
+    <div>
+      <h2 id="consent-title">Cookies und ähnliche Technologien</h2>
+      <p>Wir verwenden technisch notwendige Speicher für Warenkorb und Einstellungen. Mit Ihrer Einwilligung nutzen wir zusätzlich eine Statistik-Funktion (Demo). Details finden Sie in der <a href="../datenschutz/index.html">Datenschutzerklärung</a> und unter <a href="../cookies/index.html">Cookie-Einstellungen</a>.</p>
+    </div>
+    <div class="btns">
+      <button type="button" class="btn" data-consent="necessary">Nur notwendige</button>
+      <button type="button" class="btn" data-consent="all">Alle akzeptieren</button>
+    </div>
+  </div>
+</section>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="38" height="38">Holvana<span class="sr-only"> – zur Startseite</span></a>
+    <nav class="main-nav" aria-label="Hauptmenü"><ul><li><a href="../produkt/index.html">Produkt</a></li><li><a href="../preise/index.html">Preise</a></li><li><a href="../download/index.html">Download</a></li><li><a href="../hilfe/index.html">Hilfe</a></li><li><a href="../ueber-uns/index.html">Über uns</a></li><li><a href="../kontakt/index.html">Kontakt</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="cart-link" href="../warenkorb/index.html" data-cart-link hidden>Warenkorb <span class="cart-count" aria-hidden="true" data-cart-count>0</span><span class="sr-only">(<span data-cart-label>0 Artikel</span>)</span></a>
+      <a class="btn btn-primary btn-small" href="../produkt/index.html#kaufen">Jetzt kaufen</a>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt" tabindex="-1">
+
+
+<section class="section">
+  <div class="wrap">
+    <h1>Kasse</h1>
+    <ol class="checkout-steps" aria-label="Fortschritt der Bestellung">
+      <li>Warenkorb</li><li aria-current="step">Daten und Zahlung</li><li>Bestätigung</li>
+    </ol>
+    <div id="checkout-empty" hidden><p>Ihr Warenkorb ist leer. <a href="../preise/index.html">Lizenzen ansehen</a></p></div>
+    <div class="cart-layout">
+      <div>
+        <div id="checkout-errors" class="error-summary" tabindex="-1" hidden></div>
+        <form id="checkout-form" class="form" novalidate aria-label="Bestellformular">
+          <h2 style="font-size:1.25rem;margin:0">Rechnungsdaten</h2>
+          <div class="form-row">
+            <div class="field"><label for="co-name">Vor- und Nachname</label><input type="text" id="co-name" autocomplete="name" aria-describedby="co-name-error" required><p class="error" id="co-name-error"></p></div>
+            <div class="field"><label for="co-email">E-Mail-Adresse</label><input type="email" id="co-email" autocomplete="email" aria-describedby="co-email-hint co-email-error" required><span class="hint" id="co-email-hint">An diese Adresse senden wir Lizenzschlüssel und Rechnung.</span><p class="error" id="co-email-error"></p></div>
+          </div>
+          <div class="field" style="max-width:20rem"><label for="co-country">Land</label>
+            <select id="co-country" autocomplete="country-name" aria-describedby="co-country-error" required><option value="">Bitte wählen</option><option>Österreich</option><option>Deutschland</option><option>Schweiz</option><option>Anderes Land</option></select>
+            <p class="error" id="co-country-error"></p></div>
+
+          <fieldset aria-describedby="co-pay-hint co-pay-error">
+            <legend>Zahlungsart</legend>
+            <p class="hint" id="co-pay-hint">Demo: Es werden keine Zahlungsdaten abgefragt und keine Zahlungen ausgeführt.</p>
+            <label class="option"><input type="radio" name="zahlung" id="pay-1" value="karte"><span><b>Kreditkarte (Demo)</b></span></label>
+            <label class="option"><input type="radio" name="zahlung" id="pay-2" value="ueberweisung"><span><b>Banküberweisung (Demo)</b><small>Lizenzschlüssel nach Zahlungseingang</small></span></label>
+            <p class="error" id="co-pay-error"></p>
+          </fieldset>
+
+          <div class="field">
+            <label class="check"><input type="checkbox" id="co-terms" aria-describedby="co-terms-error"><span>Ich akzeptiere die <a href="../lizenz/index.html">Lizenzbedingungen</a> und die <a href="../agb/index.html">AGB</a>.</span></label>
+            <p class="error" id="co-terms-error"></p>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" id="co-fagg" aria-describedby="co-fagg-error"><span>[TODO: Text zur sofortigen Bereitstellung der Software und zum Rücktrittsrecht]</span></label>
+            <p class="error" id="co-fagg-error"></p>
+          </div>
+          <div class="todo"><p>Formulieren Sie den Text der zweiten Checkbox. Was muss ein Verbraucher nach § 18 Abs. 1 Z 11 FAGG ausdrücklich bestätigen, damit das Rücktrittsrecht bei digitalen Inhalten vorzeitig endet? Warum muss der Button unten genau so beschriftet sein (§ 9 Abs. 3 FAGG)?</p></div>
+          <p class="hint">Vor Ihrer Bestellung: <a href="../ruecktritt/index.html">Informationen zum Rücktrittsrecht</a> · <a href="../lizenz/index.html">Lizenzbedingungen</a> · <a href="../produkt/index.html#technik">Systemanforderungen</a>. Alle Preise inklusive 20 % USt. Lieferung als Download, keine Versandkosten.</p>
+          <div><button type="submit" class="btn btn-primary">Zahlungspflichtig bestellen</button></div>
+        </form>
+      </div>
+      <aside class="summary" aria-labelledby="co-sum">
+        <h2 id="co-sum" style="font-size:1.2rem;margin:0">Ihre Bestellung</h2>
+        <dl id="checkout-items"></dl>
+        <p class="hint" style="margin:0"><a href="../warenkorb/index.html">Warenkorb bearbeiten</a></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-cols">
+    <div class="footer-about">
+      <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="30" height="30">Holvana<span class="sr-only"> – zur Startseite</span></a>
+      <p>Dateisynchronisation zwischen Ihren eigenen Geräten. Entwickelt in Oberösterreich.</p>
+    </div>
+    <nav aria-labelledby="f-prod"><h2 id="f-prod">Produkt</h2><ul>
+      <li><a href="../produkt/index.html">Funktionen</a></li>
+      <li><a href="../preise/index.html">Preise</a></li>
+      <li><a href="../download/index.html">Testversion</a></li>
+      <li><a href="../hilfe/index.html">Hilfe und FAQ</a></li>
+    </ul></nav>
+    <nav aria-labelledby="f-firm"><h2 id="f-firm">Unternehmen</h2><ul>
+      <li><a href="../ueber-uns/index.html">Über uns</a></li>
+      <li><a href="../ueber-uns/index.html#marken">Unsere Marken</a></li>
+      <li><a href="../kontakt/index.html">Kontakt</a></li>
+      <li><a href="../credits/index.html">Medien und Lizenzen</a></li>
+    </ul></nav>
+    <div><h2 id="f-kontakt">Kontakt</h2>
+      <address class="address">Holvana GmbH<br>[Straße und Hausnummer]<br>4906 Eberschwang<br>Österreich</address>
+      <p style="margin-top:.6rem"><a href="../kontakt/index.html">Kontaktformular</a></p>
+    </div>
+  </div>
+  <div class="footer-legal">
+    <div class="wrap">
+      <p>© 2026 Holvana GmbH</p>
+      <nav aria-label="Rechtliches"><ul>
+        <li><a href="../impressum/index.html">Impressum</a></li>
+        <li><a href="../datenschutz/index.html">Datenschutz</a></li>
+        <li><a href="../lizenz/index.html">Lizenz (EULA)</a></li>
+        <li><a href="../agb/index.html">AGB</a></li>
+        <li><a href="../ruecktritt/index.html">Rücktrittsrecht</a></li>
+        <li><a href="../barrierefreiheit/index.html">Barrierefreiheit</a></li>
+        <li><a href="../cookies/index.html">Cookie-Einstellungen</a></li>
+      </ul></nav>
+    </div>
+    <div class="wrap"><p class="student-note">Studienprojekt: Holvana GmbH ist ein fiktives Unternehmen. Es werden keine echten Bestellungen angenommen und keine Zahlungen abgewickelt.</p></div>
+  </div>
+</footer>
+</body>
+</html>

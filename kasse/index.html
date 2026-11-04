@@ -46,16 +46,22 @@
       <li>Warenkorb</li><li aria-current="step">Daten und Zahlung</li><li>Bestätigung</li>
     </ol>
     <div id="checkout-empty" hidden><p>Ihr Warenkorb ist leer. <a href="../preise/index.html">Lizenzen ansehen</a></p></div>
-    <div class="cart-layout">
+    <div class="cart-layout checkout-layout">
+      <aside class="summary" aria-labelledby="co-sum">
+        <h2 id="co-sum" style="font-size:1.2rem;margin:0">Ihre Bestellung</h2>
+        <dl id="checkout-items"></dl>
+        <p class="hint" style="margin:0"><a href="../warenkorb/index.html">Warenkorb bearbeiten</a></p>
+      </aside>
       <div>
         <div id="checkout-errors" class="error-summary" tabindex="-1" hidden></div>
         <form id="checkout-form" class="form" novalidate aria-label="Bestellformular">
+          <p class="hint">So kommt der Vertrag zustande: Sie geben Ihre Daten ein und klicken auf „Zahlungspflichtig bestellen“ damit geben Sie ein verbindliches Angebot ab. Vorher können Sie Ihre Auswahl jederzeit ändern. Der Vertrag kommt mit Bestellbestätigung zustande bei der Vertragssprache handelt es sich um Deutsch. Die Lizenzbedingungen können Sie jederzeit auf unserer Website abrufen, Sie erhalten sie zusätzlich per E-Mail.</p>
           <h2 style="font-size:1.25rem;margin:0">Rechnungsdaten</h2>
           <div class="form-row">
             <div class="field"><label for="co-name">Vor- und Nachname</label><input type="text" id="co-name" autocomplete="name" aria-describedby="co-name-error" required><p class="error" id="co-name-error"></p></div>
             <div class="field"><label for="co-email">E-Mail-Adresse</label><input type="email" id="co-email" autocomplete="email" aria-describedby="co-email-hint co-email-error" required><span class="hint" id="co-email-hint">An diese Adresse senden wir Lizenzschlüssel und Rechnung.</span><p class="error" id="co-email-error"></p></div>
           </div>
-          <div class="field" style="max-width:20rem"><label for="co-country">Land</label>
+          <div class="field"><label for="co-country">Land</label>
             <select id="co-country" autocomplete="country-name" aria-describedby="co-country-error" required><option value="">Bitte wählen</option><option>Österreich</option><option>Deutschland</option><option>Schweiz</option><option>Anderes Land</option></select>
             <p class="error" id="co-country-error"></p></div>
 
@@ -72,19 +78,13 @@
             <p class="error" id="co-terms-error"></p>
           </div>
           <div class="field">
-            <label class="check"><input type="checkbox" id="co-fagg" aria-describedby="co-fagg-error"><span>[TODO: Text zur sofortigen Bereitstellung der Software und zum Rücktrittsrecht]</span></label>
+            <label class="check"><input type="checkbox" id="co-fagg" aria-describedby="co-fagg-error"><span>Ich stimme ausdrücklich zu, dass die "Holvana" GmbH vor Ablauf mit der Rücktrittsfrist mit der Bereitstellung der Software(Download und Lizenzschlüssel) beginnt. Mir ist bekannt, dass ich dadurch mein Rücktrittsrecht verliere.</span></label>
             <p class="error" id="co-fagg-error"></p>
           </div>
-          <div class="todo"><p>Formulieren Sie den Text der zweiten Checkbox. Was muss ein Verbraucher nach § 18 Abs. 1 Z 11 FAGG ausdrücklich bestätigen, damit das Rücktrittsrecht bei digitalen Inhalten vorzeitig endet? Warum muss der Button unten genau so beschriftet sein (§ 9 Abs. 3 FAGG)?</p></div>
           <p class="hint">Vor Ihrer Bestellung: <a href="../ruecktritt/index.html">Informationen zum Rücktrittsrecht</a> · <a href="../lizenz/index.html">Lizenzbedingungen</a> · <a href="../produkt/index.html#technik">Systemanforderungen</a>. Alle Preise inklusive 20 % USt. Lieferung als Download, keine Versandkosten.</p>
           <div><button type="submit" class="btn btn-primary">Zahlungspflichtig bestellen</button></div>
         </form>
       </div>
-      <aside class="summary" aria-labelledby="co-sum">
-        <h2 id="co-sum" style="font-size:1.2rem;margin:0">Ihre Bestellung</h2>
-        <dl id="checkout-items"></dl>
-        <p class="hint" style="margin:0"><a href="../warenkorb/index.html">Warenkorb bearbeiten</a></p>
-      </aside>
     </div>
   </div>
 </section>

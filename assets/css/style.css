@@ -207,7 +207,7 @@ audio { width: 100%; max-width: 440px; }
 
 /* Formulare */
 .form { display: grid; gap: 1.15rem; }
-.form-row { display: grid; gap: 1.15rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.form-row { display: grid; gap: 1.15rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: start; }
 .field { display: grid; gap: .35rem; }
 label, legend { font-weight: 600; }
 .hint { color: var(--muted); font-size: .9rem; font-weight: 400; }
@@ -229,7 +229,7 @@ legend { padding: 0; margin-bottom: .5rem; }
 .error { color: var(--error); font-size: .95rem; font-weight: 500; margin: 0; }
 .error:not(:empty)::before { content: "✕ "; }
 .error:empty { display: none; }
-.error-summary { border: 2px solid var(--error); border-radius: var(--radius); padding: 1rem 1.25rem; }
+.error-summary { border: 2px solid var(--error); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
 .error-summary h2 { font-size: 1.1rem; color: var(--error); margin-bottom: .4rem; }
 .error-summary ul { margin: 0; padding-left: 1.2rem; }
 .notice { border: 2px solid var(--success); border-radius: var(--radius); padding: 1rem 1.25rem; }
@@ -248,9 +248,16 @@ legend { padding: 0; margin-bottom: .5rem; }
 .linkbtn { background: none; border: 0; padding: .5rem 0; color: var(--accent); font: inherit; text-decoration: underline; cursor: pointer; min-height: 32px; }
 .linkbtn:hover { color: var(--accent-hover); }
 .summary { background: var(--surface); border: 1px solid var(--divider); border-radius: 10px; padding: 1.5rem; display: grid; gap: .8rem; }
-.summary dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .35rem 1rem; }
+.summary dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: .35rem 0; }
+.summary dt { padding-right: 1rem; }
 .summary dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
 .summary .total { font-weight: 700; font-size: 1.15rem; border-top: 1px solid var(--divider); padding-top: .6rem; }
+/* Kasse: Bestellübersicht steht im HTML zuerst (am Handy über dem Formular), am Desktop rechts */
+@media (min-width: 901px) {
+  .checkout-layout > div { grid-column: 1; grid-row: 1; }
+  .checkout-layout > .summary { grid-column: 2; grid-row: 1; position: sticky; top: 1.5rem; }
+}
+#checkout-empty:not([hidden]) + .cart-layout { display: none; }
 .checkout-steps { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .5rem 2rem; counter-reset: c; }
 .checkout-steps li { counter-increment: c; color: var(--muted); }
 .checkout-steps li::before { content: counter(c) ". "; }

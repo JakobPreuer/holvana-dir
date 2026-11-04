@@ -245,7 +245,7 @@
     }
     var html = "";
     cart.forEach(function (i) {
-      html += "<dt>" + i.qty + " × " + PRODUCTS[i.id].short + "</dt><dd>" + euro.format(PRODUCTS[i.id].price * i.qty) + "</dd>";
+      html += "<dt>" + i.qty + " × " + PRODUCTS[i.id].short + '<br><small class="hint">' + PRODUCTS[i.id].desc + ", nur private Nutzung, unbefristet, Download</small></dt><dd>" + euro.format(PRODUCTS[i.id].price * i.qty) + "</dd>";
     });
     var total = cartTotal(cart);
     html += "<dt>davon 20 % USt.</dt><dd>" + euro.format(total - total / (1 + VAT)) + "</dd>";

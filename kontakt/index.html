@@ -1,114 +1,217 @@
 <!DOCTYPE html>
 <html lang="de-AT" data-root="../">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kontakt – Holvana</title>
-<meta name="description" content="Kontakt zur Holvana GmbH: Kontaktformular und Anschrift.">
-<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/style.css">
-<script src="../assets/js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – Holvana</title>
+  <meta name="description" content="Kontakt zur Holvana GmbH: Kontaktformular und Anschrift.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
 </head>
+
 <body>
-<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-<section class="consent" id="consent" aria-labelledby="consent-title" hidden>
-  <div class="wrap">
-    <div>
-      <h2 id="consent-title">Cookies und ähnliche Technologien</h2>
-      <p>Wir verwenden technisch notwendige Speicher für Warenkorb und Einstellungen. Mit Ihrer Einwilligung nutzen wir zusätzlich eine Statistik-Funktion (Demo). Details finden Sie in der <a href="../datenschutz/index.html">Datenschutzerklärung</a> und unter <a href="../cookies/index.html">Cookie-Einstellungen</a>.</p>
-    </div>
-    <div class="btns">
-      <button type="button" class="btn" data-consent="necessary">Nur notwendige</button>
-      <button type="button" class="btn" data-consent="all">Alle akzeptieren</button>
-    </div>
-  </div>
-</section>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="38" height="38">Holvana<span class="sr-only"> – zur Startseite</span></a>
-    <nav class="main-nav" aria-label="Hauptmenü"><ul><li><a href="../produkt/index.html">Produkt</a></li><li><a href="../preise/index.html">Preise</a></li><li><a href="../download/index.html">Download</a></li><li><a href="../hilfe/index.html">Hilfe</a></li><li><a href="../ueber-uns/index.html">Über uns</a></li><li><a href="../kontakt/index.html" aria-current="page">Kontakt</a></li></ul></nav>
-    <div class="header-actions">
-      <a class="cart-link" href="../warenkorb/index.html" data-cart-link hidden>Warenkorb <span class="cart-count" aria-hidden="true" data-cart-count>0</span><span class="sr-only">(<span data-cart-label>0 Artikel</span>)</span></a>
-      <a class="btn btn-primary btn-small" href="../produkt/index.html#kaufen">Jetzt kaufen</a>
-    </div>
-  </div>
-</header>
-
-<main id="inhalt" tabindex="-1">
-<div class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Brotkrümelnavigation"><ol><li><a href="../index.html">Startseite</a></li><li><span aria-current="page">Kontakt</span></li></ol></nav><h1>Kontakt</h1><p class="lead">Wir freuen uns über Ihre Nachricht.</p></div></div>
-
-<section class="section" aria-label="Kontakt">
-  <div class="wrap split" style="align-items:start">
-    <div>
-      <h2 id="form-title">Nachricht senden</h2>
-      <p class="muted">Felder ohne Kennzeichnung sind Pflichtfelder.</p>
-      <div id="contact-errors" class="error-summary" tabindex="-1" hidden></div>
-      <form id="contact-form" class="form" novalidate aria-labelledby="form-title">
-        <div class="field"><label for="ct-name">Name</label><input type="text" id="ct-name" name="name" autocomplete="name" aria-describedby="ct-name-error" required><p class="error" id="ct-name-error"></p></div>
-        <div class="field"><label for="ct-email">E-Mail-Adresse</label><input type="email" id="ct-email" name="email" autocomplete="email" aria-describedby="ct-email-error" required><p class="error" id="ct-email-error"></p></div>
-        <div class="field"><label for="ct-topic">Thema</label>
-          <select id="ct-topic" name="thema" aria-describedby="ct-topic-error" required>
-            <option value="">Bitte wählen</option><option>Frage zum Produkt</option><option>Bestellung und Lizenz</option><option>Barrierefreiheit</option><option>Datenschutz</option><option>Sonstiges</option>
-          </select><p class="error" id="ct-topic-error"></p></div>
-        <div class="field"><label for="ct-msg">Ihre Nachricht</label><textarea id="ct-msg" name="nachricht" aria-describedby="ct-msg-hint ct-msg-error" required></textarea><span class="hint" id="ct-msg-hint">Mindestens 10 Zeichen.</span><p class="error" id="ct-msg-error"></p></div>
-        <p class="hint">Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu beantworten. Mehr dazu in der <a href="../datenschutz/index.html#kontaktformular">Datenschutzerklärung</a>.</p>
-        <div><button type="submit" class="btn btn-primary">Nachricht senden</button></div>
-      </form>
-      <div id="contact-status" class="notice" role="status" tabindex="-1" style="margin-top:1rem"></div>
-      <div class="todo"><p>Braucht ein Kontaktformular eine Einwilligungs-Checkbox zum Datenschutz? Welche Rechtsgrundlage nach Art. 6 DSGVO passt hier?</p></div>
-    </div>
-    <div class="buy">
-      <h2>Holvana GmbH</h2>
-      <address class="address">Schwimmbadstraße 67<br>4906 Eberschwang<br>Österreich</address>
-      <p style="margin-top:1rem">E-Mail: office@holvana.example</p>
-      <p class="muted">Anfragen beantworten wir in der Regel innerhalb von zwei Werktagen.</p>
-      <div class="todo"><p>Ergänzen Sie die vollständige Anschrift und eine E-Mail-Adresse. Welche Kontaktmöglichkeiten verlangt § 5 ECG?</p></div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-cols">
-    <div class="footer-about">
-      <a class="brand" href="../index.html"><img src="../assets/img/logo-dark.svg" alt="" width="30" height="30">Holvana<span class="sr-only"> – zur Startseite</span></a>
-      <p>Dateisynchronisation zwischen Ihren eigenen Geräten. Entwickelt in Oberösterreich.</p>
-    </div>
-    <nav aria-labelledby="f-prod"><h2 id="f-prod">Produkt</h2><ul>
-      <li><a href="../produkt/index.html">Funktionen</a></li>
-      <li><a href="../preise/index.html">Preise</a></li>
-      <li><a href="../download/index.html">Download</a></li>
-      <li><a href="../hilfe/index.html">Hilfe und FAQ</a></li>
-    </ul></nav>
-    <nav aria-labelledby="f-firm"><h2 id="f-firm">Unternehmen</h2><ul>
-      <li><a href="../ueber-uns/index.html">Über uns</a></li>
-      <li><a href="../ueber-uns/index.html#marken">Unsere Marken</a></li>
-      <li><a href="../kontakt/index.html">Kontakt</a></li>
-      <li><a href="../credits/index.html">Medien und Lizenzen</a></li>
-    </ul></nav>
-    <div><h2 id="f-kontakt">Kontakt</h2>
-      <address class="address">Holvana GmbH<br>Schwimmbadstraße 10<br>4906 Eberschwang<br>Österreich</address>
-      <p style="margin-top:.6rem"><a href="../kontakt/index.html">Kontaktformular</a></p>
-    </div>
-  </div>
-  <div class="footer-legal">
+  <section class="consent" id="consent" aria-labelledby="consent-title" hidden>
     <div class="wrap">
-      <p>© 2026 Holvana GmbH</p>
-      <nav aria-label="Rechtliches"><ul>
-        <li><a href="../impressum/index.html">Impressum</a></li>
-        <li><a href="../datenschutz/index.html">Datenschutz</a></li>
-        <li><a href="../lizenz/index.html">Lizenz (EULA)</a></li>
-        <li><a href="../agb/index.html">AGB</a></li>
-        <li><a href="../ruecktritt/index.html">Rücktrittsrecht</a></li>
-        <li><a href="../barrierefreiheit/index.html">Barrierefreiheit</a></li>
-        <li><a href="../cookies/index.html">Cookie-Einstellungen</a></li>
-      </ul></nav>
+      <div>
+        <h2 id="consent-title">Cookies und ähnliche Technologien</h2>
+        <p>
+          Wir verwenden technisch notwendige Speicher für Warenkorb und Einstellungen. Mit Ihrer Einwilligung nutzen
+          wir zusätzlich eine Statistik-Funktion (Demo). Details finden Sie in der
+          <a href="../datenschutz/index.html">Datenschutzerklärung</a> und unter
+          <a href="../cookies/index.html">Cookie-Einstellungen</a>.
+        </p>
+      </div>
+      <div class="btns">
+        <button type="button" class="btn" data-consent="necessary">Nur notwendige</button>
+        <button type="button" class="btn" data-consent="all">Alle akzeptieren</button>
+      </div>
     </div>
-    <div class="wrap"><p class="student-note">Studienprojekt: Holvana GmbH ist ein fiktives Unternehmen. Es werden keine echten Bestellungen angenommen und keine Zahlungen abgewickelt.</p></div>
-  </div>
-</footer>
+  </section>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/logo-dark.svg" alt="" width="38" height="38">
+        Holvana<span class="sr-only"> – zur Startseite</span></a>
+      <nav class="main-nav" aria-label="Hauptmenü">
+        <ul>
+          <li><a href="../produkt/index.html">Produkt</a></li>
+          <li><a href="../preise/index.html">Preise</a></li>
+          <li><a href="../download/index.html">Download</a></li>
+          <li><a href="../hilfe/index.html">Hilfe</a></li>
+          <li><a href="../ueber-uns/index.html">Über uns</a></li>
+          <li><a href="../kontakt/index.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-link" href="../warenkorb/index.html" data-cart-link hidden>
+          Warenkorb
+          <span class="cart-count" aria-hidden="true" data-cart-count>0</span><span class="sr-only">(<span data-cart-label>0 Artikel</span>)</span></a>
+        <a class="btn btn-primary btn-small" href="../produkt/index.html#kaufen">Jetzt kaufen</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inhalt" tabindex="-1">
+    <div class="page-head">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Brotkrümelnavigation">
+          <ol>
+            <li><a href="../index.html">Startseite</a></li>
+            <li><span aria-current="page">Kontakt</span></li>
+          </ol>
+        </nav>
+        <h1>Kontakt</h1>
+        <p class="lead">Wir freuen uns über Ihre Nachricht.</p>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Kontakt">
+      <div class="wrap split" style="align-items:start">
+        <div>
+          <h2 id="form-title">Nachricht senden</h2>
+          <p class="muted">Felder ohne Kennzeichnung sind Pflichtfelder.</p>
+          <div id="contact-errors" class="error-summary" tabindex="-1" hidden></div>
+          <form id="contact-form" class="form" novalidate aria-labelledby="form-title">
+            <div class="field">
+              <label for="ct-name">Name</label>
+              <input type="text" id="ct-name" name="name" autocomplete="name" aria-describedby="ct-name-error" required>
+              <p class="error" id="ct-name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="ct-email">E-Mail-Adresse</label>
+              <input type="email" id="ct-email" name="email" autocomplete="email" aria-describedby="ct-email-error" required>
+              <p class="error" id="ct-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="ct-topic">Thema</label>
+              <select id="ct-topic" name="thema" aria-describedby="ct-topic-error" required>
+                <option value="">Bitte wählen</option>
+                <option>Frage zum Produkt</option>
+                <option>Bestellung und Lizenz</option>
+                <option>Barrierefreiheit</option>
+                <option>Datenschutz</option>
+                <option>Sonstiges</option>
+              </select>
+              <p class="error" id="ct-topic-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="ct-msg">Ihre Nachricht</label>
+              <textarea id="ct-msg" name="nachricht" aria-describedby="ct-msg-hint ct-msg-error" required></textarea>
+              <span class="hint" id="ct-msg-hint">Mindestens 10 Zeichen.</span>
+              <p class="error" id="ct-msg-error"></p>
+            </div>
+
+            <p class="hint">
+              Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu beantworten. Mehr dazu in der
+              <a href="../datenschutz/index.html#kontaktformular">Datenschutzerklärung</a>.
+            </p>
+
+            <div><button type="submit" class="btn btn-primary">Nachricht senden</button></div>
+          </form>
+
+          <div id="contact-status" class="notice" role="status" tabindex="-1" style="margin-top:1rem"></div>
+
+        </div>
+
+        <div class="contact-aside">
+          <div class="buy">
+            <h2>Holvana GmbH</h2>
+            <address class="address">Schwimmbadstraße 10<br>4906 Eberschwang<br>Österreich</address>
+            <p style="margin-top:1rem">E-Mail: office@holvana.com</p>
+            <p class="muted">Anfragen beantworten wir in der Regel innerhalb von zwei Werktagen.</p>
+          </div>
+
+          <div class="buy privacy-note">
+            <p>
+              Bei Kontaktaufnahme über das Kontaktformular oder per E-Mail, verarbeiten wir Ihren Namen, Ihre E-Mail
+              Addresse, den Inhalt sowie das Thema Ihere Nachricht. Diese Daten dienen jediglich zur beantwortung Ihrer
+              Anfrage.
+            </p>
+            <dl>
+              <dt>Rechtsgrundlage:</dt>
+              <dd>
+                Betrifft Ihre Anfrage einen Kauf oder Ihre Lizenz, verarbeiten wir die Daten zur Durchführung
+                vorvertraglicher Maßnahmen bzw. zur Erfüllung des Vertrags (Art. 6 Abs. 1 lit. b DSGVO). Bei allen
+                anderen Anfragen stützen wir uns auf unser berechtigtes Interesse, Anfragen beantworten zu können
+                (Art. 6 Abs. 1 lit. f DSGVO). Sie können dieser Verarbeitung jederzeit widersprechen (Art. 21 DSGVO).
+              </dd>
+              <dt>Speicherdauer:</dt>
+              <dd>
+                Ihre Anfrage wird gelöscht sobald sie erledigt ist jedoch spätestens nach sechs Monaten. Ergibt sich
+                aus der Anfrage ein Vertrag, bewahren wir die Daten so lange auf, wie wir gesetzliche Verpflichtet sind.
+              </dd>
+              <dt>Empfänger:</dt>
+              <dd>Ihre Daten werden nicht an Dritte weitergegeben.</dd>
+              <dt>Hinweis zu diesem Studienprojekt:</dt>
+              <dd>Das Formular ist eine Demo. Eingaben werden nicht übertragen oder gespeichert.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-cols">
+      <div class="footer-about">
+        <a class="brand" href="../index.html">
+          <img src="../assets/img/logo-dark.svg" alt="" width="30" height="30">
+          Holvana<span class="sr-only"> – zur Startseite</span></a>
+        <p>Dateisynchronisation zwischen Ihren eigenen Geräten. Entwickelt in Oberösterreich.</p>
+      </div>
+      <nav aria-labelledby="f-prod">
+        <h2 id="f-prod">Produkt</h2>
+        <ul>
+          <li><a href="../produkt/index.html">Funktionen</a></li>
+          <li><a href="../preise/index.html">Preise</a></li>
+          <li><a href="../download/index.html">Download</a></li>
+          <li><a href="../hilfe/index.html">Hilfe und FAQ</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-firm">
+        <h2 id="f-firm">Unternehmen</h2>
+        <ul>
+          <li><a href="../ueber-uns/index.html">Über uns</a></li>
+          <li><a href="../ueber-uns/index.html#marken">Unsere Marken</a></li>
+          <li><a href="../kontakt/index.html">Kontakt</a></li>
+          <li><a href="../credits/index.html">Medien und Lizenzen</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 id="f-kontakt">Kontakt</h2>
+        <address class="address">Holvana GmbH<br>Schwimmbadstraße 10<br>4906 Eberschwang<br>Österreich</address>
+        <p style="margin-top:.6rem"><a href="../kontakt/index.html">Kontaktformular</a></p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div class="wrap">
+        <p>© 2026 Holvana GmbH</p>
+        <nav aria-label="Rechtliches">
+          <ul>
+            <li><a href="../impressum/index.html">Impressum</a></li>
+            <li><a href="../datenschutz/index.html">Datenschutz</a></li>
+            <li><a href="../lizenz/index.html">Lizenz (EULA)</a></li>
+            <li><a href="../agb/index.html">AGB</a></li>
+            <li><a href="../ruecktritt/index.html">Rücktrittsrecht</a></li>
+            <li><a href="../barrierefreiheit/index.html">Barrierefreiheit</a></li>
+            <li><a href="../cookies/index.html">Cookie-Einstellungen</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="wrap">
+        <p class="student-note">Studienprojekt: Holvana GmbH ist ein fiktives Unternehmen. Es werden keine echten
+          Bestellungen angenommen und keine Zahlungen abgewickelt.</p>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

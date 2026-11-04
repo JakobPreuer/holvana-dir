@@ -177,6 +177,15 @@ a:hover { color: var(--accent-hover); }
 .faq details[open] summary::after { content: "−"; }
 .faq details > div { padding-bottom: 1.1rem; color: var(--muted); }
 
+/* Kontaktseite: rechte Spalte mit Anschrift und Datenschutzhinweisen */
+.contact-aside { display: grid; gap: 1.5rem; }
+.privacy-note { font-size: .9rem; color: var(--muted); }
+.privacy-note p { margin: 0 0 .9rem; }
+.privacy-note dl { margin: 0; }
+.privacy-note dt { color: var(--text); font-weight: 600; }
+.privacy-note dd { margin: .15rem 0 .9rem; }
+.privacy-note dd:last-child { margin-bottom: 0; }
+
 /* Medien */
 .media { background: var(--bg); border: 1px solid var(--divider); border-radius: 10px; padding: 1rem; }
 .media video { width: 100%; display: block; background: #000; border-radius: 6px; }

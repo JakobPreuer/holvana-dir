@@ -40,7 +40,6 @@ Gelb gestrichelte Kästen mit „TODO – Hinweis für dich“ markieren Stellen
 Annahmen, die Sie prüfen oder ändern sollten:
 
 - Preise 49 € / 89 € und Lizenzumfang (Einzel- / Familienlizenz) – in den HTML-Seiten und in `assets/js/main.js` (`PRODUCTS`)
-- Testversion 30 Tage
 - Plattformen und Systemanforderungen (Produktseite, Download)
 - E-Mail-Adresse `office@holvana.example` (die Endung `.example` ist reserviert und gehört niemandem)
 - Klangmarke (zwei Töne E5 → A5) als Vorschlag für die dritte Markenform

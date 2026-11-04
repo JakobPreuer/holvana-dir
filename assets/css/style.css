@@ -257,6 +257,18 @@ legend { padding: 0; margin-bottom: .5rem; }
 .toc ol { margin: 0; padding-left: 1.2rem; }
 .address { font-style: normal; }
 
+/* Vertragsklauseln: automatische Nummerierung (1., 1.1, 1.2 …) mit hängendem Einzug */
+.legal .clauses, .legal .clauses ol { list-style: none; margin: 0; padding-left: 0; counter-reset: clause; }
+.clauses > li, .clauses ol > li { counter-increment: clause; position: relative; }
+.clauses > li + li { margin-top: 2.25rem; padding-top: 2.25rem; border-top: 1px solid var(--divider); }
+.legal .clauses > li > h2 { margin: 0 0 1rem; padding-left: 2.75rem; position: relative; scroll-margin-top: 1.5rem; }
+.clauses > li > h2::before { content: counter(clause) "."; position: absolute; left: 0; color: var(--accent); font-variant-numeric: tabular-nums; }
+.clauses ol > li { padding-left: 2.75rem; }
+.clauses ol > li + li { margin-top: .85rem; }
+.clauses ol > li::before { content: counters(clause, "."); position: absolute; left: 0; color: var(--muted); font-size: .95rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.85; }
+.clauses ol > li > p:last-child { margin-bottom: 0; }
+.clauses > li > .todo { margin: 1.25rem 0 0 2.75rem; }
+
 /* Bau-Hinweise – vor der Abgabe durch eigenen Text ersetzen und löschen */
 .todo { border: 2px dashed var(--todo); border-radius: var(--radius); padding: .85rem 1.1rem; margin: .75rem 0 1.5rem; background: rgba(252, 211, 77, .06); }
 .todo::before { content: "TODO – Hinweis für dich"; display: block; color: var(--todo); font-weight: 700; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .3rem; }

@@ -187,12 +187,7 @@ a:hover { color: var(--accent-hover); }
 .privacy-note dd:last-child { margin-bottom: 0; }
 
 /* Medien */
-.media { background: var(--bg); border: 1px solid var(--divider); border-radius: 10px; padding: 1rem; }
-.media video { width: 100%; display: block; background: #000; border-radius: 6px; }
-.media figcaption { color: var(--muted); font-size: .9rem; padding-top: .6rem; }
 audio { width: 100%; max-width: 440px; }
-.transcript { margin-top: .75rem; font-size: .95rem; }
-.transcript summary { cursor: pointer; color: var(--accent); font-weight: 600; }
 
 /* Produktseite: Bildergalerie */
 .gallery-main { margin: 0; }

@@ -28,7 +28,7 @@ assets/js/main.js     Warenkorb, Kasse, Formulare, Cookie-Hinweis, Produktkatalo
 assets/fonts/         Inter (lokal) + OFL.txt (Lizenztext)
 assets/img/           Logo-Varianten, Bildschirmfotos, Schema, Produktgrafiken
 assets/audio/         Klangmarke
-assets/video/         Demo-Video, Untertitel (.vtt), Vorschaubild
+assets/video/         Demo-Video, Untertitel (.vtt), Vorschaubild (nicht mehr eingebunden)
 ```
 
 Kopf- und Fußzeile stehen in jeder HTML-Datei. Wenn Sie dort etwas ändern (z. B. die Adresse), ändern Sie es mit „Suchen und Ersetzen in Dateien“ im Editor (z. B. VS Code) in allen Dateien gleichzeitig.

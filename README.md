@@ -33,17 +33,6 @@ assets/video/         Demo-Video, Untertitel (.vtt), Vorschaubild (nicht mehr ei
 
 Kopf- und Fußzeile stehen in jeder HTML-Datei. Wenn Sie dort etwas ändern (z. B. die Adresse), ändern Sie es mit „Suchen und Ersetzen in Dateien“ im Editor (z. B. VS Code) in allen Dateien gleichzeitig.
 
-## Noch offen (vor der Abgabe)
-
-Gelb gestrichelte Kästen mit „TODO – Hinweis für dich“ markieren Stellen, an denen Sie selbst Inhalte schreiben müssen. Vor der Abgabe ersetzen und die Kästen löschen. Suche nach `class="todo"` und `[TODO` bzw. `[Straße`.
-
-Annahmen, die Sie prüfen oder ändern sollten:
-
-- Preise 49 € / 89 € und Lizenzumfang (Einzel- / Familienlizenz) – in den HTML-Seiten und in `assets/js/main.js` (`PRODUCTS`)
-- Plattformen und Systemanforderungen (Produktseite, Download)
-- E-Mail-Adresse `office@holvana.com` (die Endung `.example` ist reserviert und gehört niemandem)
-- Klangmarke (zwei Töne E5 → A5) als Vorschlag für die dritte Markenform
-
 ## Prüfung
 
-Alle Seiten wurden mit axe-core 4.10 (WCAG 2.0/2.1/2.2 A und AA, Best Practices) geprüft: keine Verstöße. Zusätzlich empfohlen: WAVE, Tastaturtest, Zoom auf 200 % und ein Screenreader-Test (NVDA oder VoiceOver).
+Am 8. November 2026 wurden alle 19 Seiten bei 1280 und 320 Pixel Breite sowie 11 Bedienzustände mit axe-core 4.10.3 (WCAG 2.0/2.1/2.2 A und AA, Best Practices) geprüft: keine Verstöße. Außerdem geprüft: Farbkontraste, Tastaturdurchlauf, Links und Darstellung bei 320 Pixel Breite. Noch nicht durchgeführt: WAVE und ein Screenreader-Test (NVDA oder VoiceOver).

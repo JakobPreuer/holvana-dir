@@ -34,7 +34,6 @@
   --divider: #334155;     /* rein dekorative Linien */
   --success: #4ADE80;
   --error: #F87171;
-  --todo: #FCD34D;        /* nur Bau-Hinweise, vor der Abgabe entfernen */
 
   --font: "Inter", "Helvetica Neue", Arial, sans-serif;
   --radius: 6px;
@@ -56,7 +55,7 @@ body {
   line-height: 1.65;
 }
 img, svg, video { max-width: 100%; height: auto; }
-h1, h2, h3 { line-height: 1.2; margin: 0 0 .6em; text-wrap: balance; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .6em; text-wrap: balance; overflow-wrap: break-word; hyphens: auto; }
 h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); font-weight: 700; letter-spacing: -.02em; }
 h2 { font-size: clamp(1.5rem, 1.2rem + 1.1vw, 2rem); font-weight: 700; letter-spacing: -.01em; }
 h3 { font-size: 1.15rem; font-weight: 600; }
@@ -261,6 +260,7 @@ legend { padding: 0; margin-bottom: .5rem; }
 .keybox code { font-family: var(--font); font-size: 1.25rem; font-weight: 600; }
 
 /* Rechtstexte */
+.legal { overflow-wrap: break-word; }
 .legal h2 { font-size: 1.4rem; margin-top: 2.5rem; }
 .legal h3 { margin-top: 1.5rem; }
 .legal ul, .legal ol { padding-left: 1.25rem; }
@@ -278,13 +278,6 @@ legend { padding: 0; margin-bottom: .5rem; }
 .clauses ol > li + li { margin-top: .85rem; }
 .clauses ol > li::before { content: counters(clause, "."); position: absolute; left: 0; color: var(--muted); font-size: .95rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.85; }
 .clauses ol > li > p:last-child { margin-bottom: 0; }
-.clauses > li > .todo { margin: 1.25rem 0 0 2.75rem; }
-
-/* Bau-Hinweise – vor der Abgabe durch eigenen Text ersetzen und löschen */
-.todo { border: 2px dashed var(--todo); border-radius: var(--radius); padding: .85rem 1.1rem; margin: .75rem 0 1.5rem; background: rgba(252, 211, 77, .06); }
-.todo::before { content: "TODO – Hinweis für dich"; display: block; color: var(--todo); font-weight: 700; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .3rem; }
-.todo p:last-child, .todo ul:last-child { margin-bottom: 0; }
-.todo ul { margin-top: 0; }
 
 /* Logo-Varianten */
 .logo-variants { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 1.25rem 0; }
@@ -329,4 +322,5 @@ legend { padding: 0; margin-bottom: .5rem; }
   .cart-item img { width: 72px; }
   .cart-item .line-price { grid-column: 2; }
   .main-nav ul { gap: .1rem 1.1rem; }
+  .legal { hyphens: auto; }
 }

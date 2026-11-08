@@ -26,7 +26,7 @@
 
   var root = document.documentElement.getAttribute("data-root") || "";
 
-  /* ---------- Produktkatalog (Preise = Platzhalter) ---------- */
+  /* ---------- Produktkatalog ---------- */
   var PRODUCTS = {
     einzel: { name: "Holvana 1 – Einzellizenz", short: "Einzellizenz", price: 49, img: "assets/img/box-einzel.svg",
       desc: "Für eine Person und alle eigenen Geräte" },
@@ -117,7 +117,7 @@
     }
   }
   function mockAnalytics() {
-    /* Platzhalter für ein Analyse-Tool. Es werden keine Daten übertragen. */
+    /* Demo statt eines echten Analyse-Tools. Es werden keine Daten übertragen. */
     if (window.console) console.info("[Demo-Analyse] Seitenaufruf:", location.pathname);
   }
 
@@ -187,7 +187,7 @@
         for (var q = 1; q <= 10; q++) opts += '<option value="' + q + '"' + (q === item.qty ? " selected" : "") + ">" + q + "</option>";
         li.innerHTML =
           '<img src="' + root + p.img + '" alt="" width="110" height="69">' +
-          "<div><h2 class=\"item-title\">" + p.name + '</h2><p class="muted" style="margin:0">' + p.desc + " · Download, sofort verfügbar</p>" +
+          "<div><h2 class=\"item-title\">" + p.name + '</h2><p class="muted" style="margin:0">' + p.desc + " · Download</p>" +
           '<div class="controls"><label for="qty-' + item.id + '">Anzahl</label>' +
           '<select id="qty-' + item.id + '" data-qty="' + item.id + '">' + opts + "</select>" +
           '<button type="button" class="linkbtn" data-remove="' + item.id + '">Entfernen<span class="sr-only">: ' + p.name + "</span></button></div></div>" +
@@ -279,6 +279,7 @@
         nr: "HV-" + new Date().getFullYear() + "-" + randomBlock(6),
         date: new Date().toISOString(),
         email: mail,
+        payment: pay.value,
         items: cart,
         total: total,
         keys: []
@@ -303,6 +304,12 @@
     document.getElementById("order-nr").textContent = order.nr;
     document.getElementById("order-mail").textContent = order.email;
     document.getElementById("order-total").textContent = euro.format(order.total);
+    /* Bei Banküberweisung gibt es den Schlüssel erst nach Zahlungseingang (AGB Punkt 4). */
+    if (order.payment === "ueberweisung") {
+      document.getElementById("order-pending").hidden = false;
+      document.getElementById("order-keys-hint").hidden = true;
+      return;
+    }
     var keys = document.getElementById("order-keys");
     order.keys.forEach(function (k, idx) {
       var div = document.createElement("div");

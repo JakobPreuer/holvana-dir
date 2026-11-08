@@ -47,14 +47,15 @@
       <h1>Vielen Dank für Ihre Bestellung</h1>
       <p>Bestellnummer: <strong class="mono" id="order-nr"></strong><br>Gesamtbetrag: <strong id="order-total"></strong><br>Bestätigung an: <span id="order-mail"></span></p>
       <h2 style="margin-top:2rem">Ihre Lizenzschlüssel</h2>
-      <p class="muted">Die Schlüssel enthalten keine leicht verwechselbaren Zeichen wie I, l, 1, O und 0.</p>
+      <p id="order-pending" hidden>Sie haben Banküberweisung gewählt, Ihre Lizenzschlüssel wird Ihnen per Bestellbestätigung und per E-Mail nach Zahlungseingang bereitgestellt. Bis dahin können Sie Ihr Rücktrittsrecht uneingeschränkt ausüben.</p>
+      <p class="muted" id="order-keys-hint">Lizenzschlüssel enthalten keine leicht verwechselbaren Zeichen wie I, l, 1, O und 0.</p>
       <div id="order-keys"></div>
       <p id="order-status" class="sr-only" role="status"></p>
       <h2 style="margin-top:2rem">So geht es weiter</h2>
       <p>Laden Sie Holvana herunter und geben Sie den Schlüssel unter „Einstellungen → Lizenz“ ein.</p>
       <a class="btn btn-primary" href="../download/index.html">Zum Download</a>
-      <h2 style="margin-top:rem">Bestätigung</h2>
-      <p>Wir senden Ihnen eine Bestätigung der Bestellung Sie erhalten diese an die von Ihnen angegebene E-Mail Adresse. Die E-Email enthält Bestelldetails, Lizenzschlüssel, Lizenzbedingungen, eine Bestellbestätigung und Ihre ausdrückliche Zustimmung dass die Holvana GmbH vor Ablauf der Rücktrittsfrist mit der Bereitstellung der Software beginnt, Ihr Rücktrittsrecht erlischt damit.</p>
+      <h2 style="margin-top:2rem">Bestätigung</h2>
+      <p>Wir senden Ihnen eine Bestätigung der Bestellung an die von Ihnen angegebene E-Mail-Adresse. Die E-Mail enthält die Bestelldetails, die Lizenzschlüssel (bei Banküberweisung nach Zahlungseingang), die Lizenzbedingungen sowie Ihre ausdrückliche Zustimmung, dass die Holvana GmbH vor Ablauf der Rücktrittsfrist mit der Bereitstellung der Software beginnt. Mit Beginn der Bereitstellung erlischt Ihr Rücktrittsrecht.</p>
       <p class="hint" style="margin-top:2rem">Studienprojekt: Diese Bestellung ist eine Demo. Es wurde nichts verkauft und keine E-Mail versendet.</p>
     </div>
   </div>

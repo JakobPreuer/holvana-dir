@@ -24,6 +24,22 @@
     }
   };
 
+  /* ---------- Speicherdauer (Datenschutzerklärung, Abschnitt 3) ---------- */
+  var MAX_AGE = {
+    "holvana-cart": { months: 6 },
+    "holvana-order": { hours: 24 },
+    "holvana-consent": { months: 6 }
+  };
+  /* localStorage läuft nicht von selbst ab, deshalb wird hier bei jedem Seitenaufruf geprüft. */
+  Object.keys(MAX_AGE).forEach(function (key) {
+    var entry = store.get(key, null);
+    var limit = new Date(entry ? entry.date : NaN);
+    if (isNaN(limit)) return;
+    limit.setMonth(limit.getMonth() + (MAX_AGE[key].months || 0));
+    limit.setUTCHours(limit.getUTCHours() + (MAX_AGE[key].hours || 0));
+    if (new Date() >= limit) store.remove(key);
+  });
+
   var root = document.documentElement.getAttribute("data-root") || "";
 
   /* ---------- Produktkatalog ---------- */
@@ -36,8 +52,15 @@
   var VAT = 0.20;
   var euro = new Intl.NumberFormat("de-AT", { style: "currency", currency: "EUR" });
 
-  function getCart() { return store.get("holvana-cart", []); }
-  function setCart(cart) { store.set("holvana-cart", cart); updateBadge(); }
+  function getCart() {
+    var saved = store.get("holvana-cart", null);
+    return saved && saved.items ? saved.items : [];
+  }
+  function setCart(cart) {
+    if (cart.length) store.set("holvana-cart", { date: new Date().toISOString(), items: cart });
+    else store.remove("holvana-cart");
+    updateBadge();
+  }
   function cartCount(cart) { return cart.reduce(function (n, i) { return n + i.qty; }, 0); }
   function cartTotal(cart) { return cart.reduce(function (s, i) { return s + PRODUCTS[i.id].price * i.qty; }, 0); }
 

@@ -135,7 +135,7 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         save(box.checked);
-        status.innerHTML = "<strong>Gespeichert.</strong> Statistik-Cookies sind jetzt " + (box.checked ? "aktiviert." : "deaktiviert.");
+        status.innerHTML = "<strong>Gespeichert.</strong> Statistik ist jetzt " + (box.checked ? "aktiviert." : "deaktiviert.");
       });
     }
   }

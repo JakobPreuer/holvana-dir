@@ -35,4 +35,4 @@ Kopf- und Fußzeile stehen in jeder HTML-Datei. Wenn Sie dort etwas ändern (z. 
 
 ## Prüfung
 
-Am 8. November 2026 wurden alle 19 Seiten bei 1280 und 320 Pixel Breite sowie 11 Bedienzustände mit axe-core 4.10.3 (WCAG 2.0/2.1/2.2 A und AA, Best Practices) geprüft: keine Verstöße. Außerdem geprüft: Farbkontraste, Tastaturdurchlauf, Links und Darstellung bei 320 Pixel Breite. Noch nicht durchgeführt: WAVE und ein Screenreader-Test (NVDA oder VoiceOver).
+Am 8. November 2026 wurden alle 19 Seiten bei 1280 und 320 Pixel Breite sowie 11 Bedienzustände mit axe-core 4.10.3 (WCAG 2.0/2.1/2.2 A und AA, Best Practices) geprüft: keine Verstöße. Außerdem geprüft: Farbkontraste, Tastaturdurchlauf, Links und Darstellung bei 320 Pixel Breite.
